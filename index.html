@@ -1,15 +1,27 @@
 <html lang="ja">
-<head>
+
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vuedemo</title>
-</head>
-<body>
-    <div id="app">
-        <p>{{text}}</p>
-        <p>{{body}}</p>
+  </head>
+
+  <body>
+    <h1>
+      Slot Exercise
+    </h1>
+    <div id="slot-demo">
+      <blog-slot-post>John Doe</blog-slot-post>
+      <blog-slot-info>
+        <template v-slot:default>John Doe</template>
+        <template v-slot:age>25</template>
+        <template v-slot:sex>男性</template>
+      </blog-slot-info>
+      <blog-slot-user>
+      </blog-slot-user>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="index.js"></script>
-</body>
+  </body>
+
 </html>
